@@ -1,0 +1,21 @@
+package com.teste.cursojava.aula01;
+
+public class VariavelChar {
+
+	private static final char OX00E1 = 0;
+
+	public static void main(String[] args) {
+		
+		//char o = 'o';
+		//char i = 'i';
+		
+		//forma 2
+		char o = 111;
+		char i = 105;
+		char interrogacao = OX00E1; // valor '?', em UNICODE
+		
+		System.out.println("Saudação: " + "" + o + i + interrogacao);
+
+	}
+
+}
