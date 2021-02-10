@@ -17,7 +17,7 @@ public class LerDadosTeclado {
 		System.out.println("Digite sua altura: ");
 		double altura = scan.nextDouble();
 		
-		System.out.println("Olá, " + nomeCompleto + ". Seja bem-vindo!"
+		System.out.println("Olá, " + nomeCompleto + ". \nSeja bem-vindo!"
 				+ " Você tem " + idade + " anos, e" + " sua altura é " + altura
 				+ " m."
 				);
