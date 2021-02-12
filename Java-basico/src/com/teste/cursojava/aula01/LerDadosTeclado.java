@@ -1,4 +1,4 @@
-package com.teste.cursojava.aula02;
+package com.teste.cursojava.aula01;
 
 import java.util.Scanner;
 
