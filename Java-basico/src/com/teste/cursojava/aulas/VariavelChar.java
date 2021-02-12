@@ -1,4 +1,4 @@
-package com.teste.cursojava.aula01;
+package com.teste.cursojava.aulas;
 
 public class VariavelChar {
 
