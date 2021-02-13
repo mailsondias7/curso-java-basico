@@ -20,8 +20,8 @@ public class MediaNotasAluno {
 			System.out.println("Aluno Aprovado com distinção");
 		} else if (media >= 7) {
 			System.out.println("Aluno Aprovado");
-		} else {
-			System.out.println("Aluno Reprovado10");
+		} else if (media < 7) {
+			System.out.println("Aluno Reprovado");
 		}
 	}
 
