@@ -1,0 +1,20 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class NotaEntre0e10 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Insira um numero entre 0 e 10: ");
+		int numero = scan.nextInt();
+
+		while (numero <= 10) {
+			System.out.println("Numero digitado foi: " + numero);
+		}
+
+	}
+
+}

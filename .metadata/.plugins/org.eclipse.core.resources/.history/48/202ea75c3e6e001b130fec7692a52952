@@ -1,0 +1,27 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class NotaEntre0e10 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		boolean notaValida = false;
+
+		do {
+			System.out.println("Insira uma nota entre 0 e 10: ");
+			float nota = scan.nextFloat();
+
+			if (nota > 0 && nota <= 10) {
+				notaValida = true;
+				System.out.println("Voce inseriu a nota: " + nota);
+			} else {
+				notaValida = false;
+				System.out.println("Nota inválida digite novamente");
+			}
+		} while (!notaValida);
+
+	}
+}
