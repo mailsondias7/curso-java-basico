@@ -1,0 +1,30 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class NomeSenha {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		boolean senhaValida = false;
+
+		do {
+			System.out.println("Insira seu nome: ");
+			String nome = scan.next();
+
+			System.out.println("Insira a senha: ");
+			String senha = scan.next().concat(nome);
+
+			if (senha != nome) {
+				senhaValida = true;
+				System.out.println("A senha não pode ser igual ao nome");
+			} else {
+				System.out.println("Insira novamente");
+			}
+		} while (!senhaValida);
+
+	}
+
+}
