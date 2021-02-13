@@ -1,0 +1,23 @@
+package com.teste.cursojava.aula02;
+
+public class teste {
+
+	public static void main(String[] args) {
+
+		System.out.print("digite um número inteiro");
+		int n1 = Integer.parseInt(System.console().readLine());
+
+		System.out.print("digite um número inteiro");
+		int n2 = Integer.parseInt(System.console().readLine());
+
+		if (n1 > n2) {
+			int resultadoDiferenca = (n1 - n2);
+			System.out.print(resultadoDiferenca);
+		} else if (n1 - n2 == 0) {
+			int resultadodiferenca2 = (0);
+			System.out.print(
+					"o resultado da diferença do menor número para o maior número é = %.1\n" + resultadodiferenca2);
+
+		}
+	}
+}

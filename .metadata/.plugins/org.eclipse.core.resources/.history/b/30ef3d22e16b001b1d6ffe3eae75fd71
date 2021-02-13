@@ -1,0 +1,28 @@
+package com.teste.cursojava.aula02;
+
+import java.util.Scanner;
+
+public class teste {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("digite um número inteiro");
+		int n1 = scan.nextInt();
+
+		System.out.print("digite o segundo número inteiro");
+		int n2 = scan.nextInt();
+
+		if (n1 > n2) {
+			int resultadoDiferenca = n1 - n2;
+			System.out.print(resultadoDiferenca);
+		} else if (n1 < n2 ) {
+			int resultadodiferenca2 = (n1 - n2);
+			System.out.print(
+					"o resultado da diferença do menor número para o maior número é = " + resultadodiferenca2);
+
+		} else if (n1 + n2 == 0) {
+			System.out.println("tudo igual a zero");
+		}
+	}
+}
