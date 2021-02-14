@@ -1,0 +1,45 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class ValidarInformacoes {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		String nome;
+		int idade;
+		double salario;
+		char sexo;
+		char estadoCivil;
+		boolean dadosValidos = false;
+
+		do {
+			System.out.println("Informe seu primeiro nome: ");
+			nome = scan.next();
+			
+			if (nome.length() > 3) {
+				dadosValidos = true;
+				System.out.println("Olá, " + nome);
+			}else {
+				System.out.println("O nome tem que ter mais que três caracteres");
+			}
+
+		} while (!dadosValidos);
+		
+		do {
+			System.out.println("Qual a sua idade? ");
+			idade = scan.nextInt();
+			
+			if(idade > 0 || idade <=150) {
+				dadosValidos=true;
+				System.out.println("Idade válida");
+			}else {
+				System.out.println("Insira uma idade entre 1 e 150 anos");
+			}
+		}while(!dadosValidos);
+
+	}
+
+}

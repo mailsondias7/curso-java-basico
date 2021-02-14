@@ -1,0 +1,86 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class ValidarDados {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		String nome, sexo, estadoCivil;
+		int idade;
+		double salario;
+		boolean dadosValidos = false;
+
+		do {
+			System.out.println("Informe seu primeiro nome: ");
+			nome = scan.next();
+
+			if (nome.length() > 3) {
+				dadosValidos = true;
+			} else {
+				System.out.println("O nome tem que ter mais que três caracteres");
+			}
+
+		} while (!dadosValidos);
+
+		dadosValidos = false;
+		do {
+			System.out.println("Qual a sua idade? ");
+			idade = scan.nextInt();
+
+			if (idade > 0 && idade <= 150) {
+				dadosValidos = true;
+			} else {
+				System.out.println("Insira uma idade entre 1 e 150 anos");
+			}
+		} while (!dadosValidos);
+
+		dadosValidos = false;
+		do {
+			System.out.println("Qual o seu salário? ");
+			salario = scan.nextDouble();
+
+			if (salario > 0) {
+				dadosValidos = true;
+			} else {
+				System.out.println("Insira um salário válido");
+			}
+		} while (!dadosValidos);
+
+		dadosValidos = false;
+		do {
+			System.out.println("Qual o seu sexo? ");
+			sexo = scan.next();
+
+			if (sexo.equalsIgnoreCase("f") || sexo.equalsIgnoreCase("m")) {
+				dadosValidos = true;
+			} else {
+				System.out.println("Insira o sexo válido: f ou m");
+			}
+		} while (!dadosValidos);
+
+		dadosValidos = false;
+		do {
+			System.out.println("Qual o seu estado civil? ");
+			estadoCivil = scan.next();
+
+			if (estadoCivil.equalsIgnoreCase("s") || estadoCivil.equalsIgnoreCase("c")
+					|| estadoCivil.equalsIgnoreCase("v") || estadoCivil.equalsIgnoreCase("d")) {
+				dadosValidos = true;
+			} else {
+				System.out.println("Insira o estado civil válido: s, c, v, d");
+			}
+		} while (!dadosValidos);
+
+		System.out.println("Dados Informados");
+		System.out.println("Nome: " + nome);
+		System.out.println("Idade: " + idade);
+		System.out.println("Salário: " + salario);
+		System.out.println("Sexo: " + sexo);
+		System.out.println("Estado Civil: " + estadoCivil);
+
+	}
+
+}

@@ -1,0 +1,38 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class ValidarInformacoes {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		String nome;
+		int idade;
+		double salario;
+		char sexo;
+		char estadoCivil;
+		boolean dadosValidos = false;
+		
+		do {
+		System.out.println("Informe seu primeiro nome: ");
+		nome = scan.next();
+		System.out.println("Qual a sua idade? ");
+		idade = scan.nextInt();
+		System.out.println("Qual o seu salário: ");
+		salario = scan.nextDouble();
+		System.out.println("Informe o sexo: ");
+		sexo = scan.next().charAt(0);
+		System.out.println("Informe o seu estado civil com uma letra inicial: ");
+		estadoCivil = scan.next().charAt(0);
+		
+		if(nome.length()>3 && idade > 0 && idade <= 150 && salario > 0) {
+			System.out.println("Nome válido, tem mais de 3 caracteres: " + nome);
+		}
+		
+		}while(!dadosValidos);
+
+	}
+
+}

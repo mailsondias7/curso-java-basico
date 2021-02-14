@@ -1,0 +1,33 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class ValidarInformacoes {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		String nome;
+		int idade;
+		double salario;
+		char sexo;
+		char estadoCivil;
+		boolean dadosValidos = false;
+
+		do {
+			System.out.println("Informe seu primeiro nome: ");
+			nome = scan.next();
+			
+			if (nome.length() > 3) {
+				dadosValidos = true;
+				System.out.println("Nome válido, tem mais de 3 caracteres: " + nome);
+			}else {
+				System.out.println("O nome tem que ter mais que três caracteres");
+			}
+
+		} while (!dadosValidos);
+
+	}
+
+}
