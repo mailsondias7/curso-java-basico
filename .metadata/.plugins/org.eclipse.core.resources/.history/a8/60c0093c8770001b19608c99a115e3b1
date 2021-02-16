@@ -1,0 +1,12 @@
+package com.teste.cursojava.aulas;
+
+public class Matriz {
+
+	public static void main(String[] args) {
+		
+		double[][] notasAlunos = new double[][];
+		
+
+	}
+
+}
