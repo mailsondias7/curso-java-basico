@@ -1,0 +1,77 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class CalculoIgualarPopulacaoScanner {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		double popA, popB, taxaA, taxaB;
+	
+		boolean validarDados = false;
+		do {
+			System.out.println("Insira a populaçao A:");
+			popA = scan.nextDouble();
+			
+			if(popA > 0) {
+				validarDados = true;
+			}else {
+				System.out.println("A população de A tem que ser maior que 0");
+			}
+			
+		}while(!validarDados);
+		
+		validarDados = false;
+		do {
+			System.out.println("Insira o valor da população B:");
+			popB = scan.nextDouble();
+			
+			if(popB > 0) {
+				validarDados = true;
+			}else {
+				System.out.println("A população B precisa ser maior que 0");
+			}
+		}while(!validarDados);
+		
+		validarDados=false;
+		do {
+			System.out.println("Insira a taxa da população A");
+			taxaA = scan.nextDouble();
+			
+			if(taxaA > 0) {
+				validarDados=true;
+			}else {
+				System.out.println("A taxa da população A tem que ser maior que 0");
+			}
+		}while(!validarDados);
+		
+		validarDados=false;
+		do {
+			System.out.println("Insira a taxa da população B");
+			taxaB=scan.nextDouble();
+			
+			if(taxaB>0) {
+				validarDados=true;
+			}else {
+				System.out.println("A taxa da população B tem que ser maior que 0");
+			}
+		}while(!validarDados);
+
+		int cont = 0;
+		
+		while(popA < popB) {
+			
+			popA += (popA/100) * taxaA;
+			popB += (popB/100) * taxaB;
+			cont++;
+		}
+		
+		System.out.println("População A: " + popA);
+		System.out.println("População B: " + popB);
+		System.out.println("Quantidade de anos: " + cont);
+		
+	}
+
+}

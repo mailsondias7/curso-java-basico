@@ -1,0 +1,29 @@
+package com.teste.cursojava.exercicios;
+
+import java.util.Scanner;
+
+public class CalculoIgualarPopulacaoScanner {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		double popA, popB, taxaA, taxaB;
+	
+		boolean validarDados = false;
+		do {
+			System.out.println("Insira a populaçao A:");
+			popA = scan.nextDouble();
+			
+			if(popA > 0) {
+				validarDados = true;
+				//System.out.println("População de A: " + popA);
+			}else {
+				System.out.println("A população de A tem que ser maior que 0");
+			}
+			
+		}while(!validarDados);
+
+	}
+
+}
